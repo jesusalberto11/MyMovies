@@ -2,8 +2,7 @@ const OPTIONS = {
   method: "GET",
   headers: {
     accept: "application/json",
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4ZGM1YjhjNjQ2ZGEwZWNhYTMzMzQ5YjQ4MWRlMzAxYiIsInN1YiI6IjY1ZTg5ZjM4ZWE0MjYzMDE3YjIyYmIwNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Wl5DN0mesPW1V7Gxhfg4xjoIwbPgDlbkYr_OmXQR_xI",
+    Authorization: `${import.meta.env.VITE_MOVIE_API_KEY}`,
   },
 };
 
