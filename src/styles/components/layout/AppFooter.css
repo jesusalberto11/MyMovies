@@ -1,0 +1,28 @@
+.footer {
+  height: 130px;
+  min-height: 130px;
+  width: 100%;
+
+  flex-direction: column;
+  gap: 15px;
+}
+
+.copyright-text,
+.footer-list-item span {
+  color: #c0c0c0;
+
+  font-size: 14px;
+}
+
+.footer-list {
+  gap: 20px;
+}
+
+.footer-list-item {
+  list-style: none;
+}
+
+.footer-list-item a {
+  text-decoration: none;
+  border: none;
+}

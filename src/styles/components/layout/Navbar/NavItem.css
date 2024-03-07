@@ -1,0 +1,29 @@
+.nav-item {
+  cursor: pointer;
+
+  height: 30px;
+  width: auto;
+
+  padding: 5px 5px;
+  border-radius: 5px;
+
+  gap: 5px;
+
+  text-transform: uppercase;
+
+  background-color: black;
+  border: 1px solid white;
+
+  transition: all 0.2s;
+}
+
+.nav-item:hover {
+  filter: drop-shadow(0 0 8px #90e0ef);
+
+  background-color: white;
+  color: black;
+}
+
+.nav-item:hover svg {
+  fill: black;
+}

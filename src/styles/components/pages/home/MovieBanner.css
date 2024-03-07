@@ -1,0 +1,59 @@
+.movie-banner-container {
+  height: 300px;
+  width: 100%;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  border-radius: 15px;
+
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.banner-image-and-description {
+  width: 100%;
+
+  align-items: flex-end;
+  gap: 50px;
+
+  background-color: rgba(0, 0, 0, 0.7);
+
+  margin: 15px 15px;
+  padding: 15px 55px;
+
+  border-radius: 10px;
+}
+
+.movie-details {
+  height: 100%;
+
+  flex-direction: column;
+  gap: 15px;
+}
+
+.banner-description {
+  max-width: 800px;
+}
+
+@media screen and (max-width: 768px) {
+  .movie-banner-container {
+    height: auto;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  .banner-image-and-description {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    margin: 10px 10px;
+    padding: 15px 15px;
+  }
+}

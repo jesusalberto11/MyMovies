@@ -1,0 +1,15 @@
+.categories-container {
+  height: auto;
+  min-height: 130px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+
+  padding: 15px 0px;
+
+  overflow-y: hidden;
+  overflow-x: auto;
+}

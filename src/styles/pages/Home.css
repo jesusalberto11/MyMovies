@@ -1,0 +1,41 @@
+.home-page {
+  width: 100vw;
+  height: 100vh;
+
+  padding: 15px 25px;
+  padding-bottom: 80px;
+
+  overflow-y: scroll;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.categories-card {
+  cursor: pointer;
+
+  height: 100px;
+  width: 200px;
+  min-width: 200px;
+
+  border: 1px solid #457b9d;
+
+  transition: all 0.2s;
+}
+
+.categories-card:hover {
+  transform: scale(1.05);
+}
+
+.categories-card:active {
+  transform: scale(0.95);
+}
+
+.category-name {
+  user-select: none;
+
+  font-size: 22px;
+  font-weight: bold;
+  filter: none;
+}

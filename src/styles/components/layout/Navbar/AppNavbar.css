@@ -1,0 +1,21 @@
+.navbar {
+  gap: 25px;
+}
+
+.nav-items {
+  gap: 15px;
+}
+
+.nav-items-horizontal {
+  flex-direction: row;
+}
+
+.nav-items-vertical {
+  flex-direction: column;
+}
+
+@media (max-width: 736px) {
+  .nav-items.flex.nav-items-horizontal {
+    display: none;
+  }
+}

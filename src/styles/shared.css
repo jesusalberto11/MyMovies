@@ -1,0 +1,28 @@
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.no-pointer-events {
+  pointer-events: none;
+}
+
+.hide-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pacifico-font {
+  font-family: "Pacifico";
+}

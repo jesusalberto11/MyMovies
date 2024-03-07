@@ -1,0 +1,48 @@
+.go-to-search-banner {
+  height: 300px;
+  min-height: 180px;
+
+  background-color: #001d3d;
+
+  flex-direction: column;
+  gap: 10px;
+
+  border-radius: 5px;
+}
+
+.go-to-search-banner p {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.searchbar {
+  width: 100%;
+  min-width: 40px;
+  max-width: 240px;
+
+  background-color: #1e2329;
+  color: white;
+
+  border: 1px solid #2d3137;
+  border-radius: 5px;
+
+  padding: 10px 10px;
+}
+
+.searchbar:focus {
+  outline: 2px solid #4361ee;
+}
+
+.searchbar::placeholder {
+  color: #c5c5c5;
+}
+
+@media screen and (max-width: 768px) {
+  .go-to-search-banner {
+    gap: 15px;
+  }
+
+  .go-to-search-banner p {
+    font-size: 16px;
+  }
+}

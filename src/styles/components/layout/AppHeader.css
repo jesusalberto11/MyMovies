@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+
+  padding: 15px 25px;
+}
+
+.app-title {
+  text-align: left;
+}

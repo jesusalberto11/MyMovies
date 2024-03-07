@@ -1,0 +1,53 @@
+.content-category-card {
+  cursor: pointer;
+
+  height: auto;
+
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  transition: all 0.2s;
+}
+
+.card-title {
+  width: 100%;
+  max-width: 150px;
+
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-details {
+  width: 100%;
+
+  justify-content: space-around;
+}
+
+.vote-avg-star {
+  content: "★";
+  color: #ffc700;
+}
+
+.star-and-avg {
+  padding: 2px 2px;
+  gap: 5px;
+}
+
+.card-movie-vote {
+  color: #ced4da;
+}
+
+.card-movie-relase-date {
+  background-color: #495057;
+  border-radius: 5px;
+
+  font-weight: bold;
+
+  padding: 2px 4px;
+}

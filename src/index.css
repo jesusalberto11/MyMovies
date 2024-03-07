@@ -1,0 +1,92 @@
+@import url(styles/shared.css);
+
+@font-face {
+  font-display: swap;
+  font-family: "Pacifico";
+  src: url("assets/Pacifico-Regular.ttf");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Inter";
+  src: url("assets/Inter-Regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --PRIMARY: #00509d;
+  --SECONDARY: #ffff;
+
+  --BLACK-FONT: #000;
+  --WHITE-FONT: #fff;
+
+  --SECTION-HEADER-1: #03045e;
+  --SECTION-HEADER-2: #0077b6;
+
+  --SIDEBAR-BG-COLOR: #001d3d;
+  --CLOSE-ZONE-BG-COLOR: #1c2541;
+
+  --SUCCESS-BTN: #0a9396;
+  --SUCCESS-BTN-HOVER: #005f73;
+  --SIMPLE-BUTTON: #023e8a;
+  --SIMPLE-BUTTON-HOVER: #0077b6;
+  --NAV-BUTTON-HOVER: #48cae4;
+
+  --simple-button-text-color: white;
+  --simple-button-svg-icon-color: white;
+  --simple-button-bg-color: black;
+  --simple-button-hover-color: drop-shadow(0 0 8px #8b91ff);
+  --simple-button-border: 1px solid white;
+
+  --INPUT-FOCUS: #0a9396;
+
+  --REVIEW-ITEM-BG-COLOR: #eaf4f4;
+}
+
+body {
+  background: rgb(20, 33, 61);
+  background: linear-gradient(
+    180deg,
+    rgba(20, 33, 61, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+
+  color: var(--WHITE-FONT);
+
+  overflow-y: hidden;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #8d99ae;
+
+  border-radius: 5px;
+}
+
+hr {
+  min-width: 100%;
+  height: 5px;
+
+  background-color: #8d99ae;
+
+  border: 2px solid #8d99ae;
+  border-radius: 20px;
+}

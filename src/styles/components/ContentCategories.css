@@ -1,0 +1,4 @@
+.content-categories-container {
+  flex-direction: column;
+  gap: 5px;
+}
