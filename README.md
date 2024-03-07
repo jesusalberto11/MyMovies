@@ -1,30 +1,100 @@
-# React + TypeScript + Vite
+<div align="center">
+  <h1>MyMovies</h1>
+</div>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## :star2: About the Project
 
-Currently, two official plugins are available:
+This repository contains a frontend app to fetch Themoviedb backend., it was created using:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<ul>
+<li>React + Vite</li>
+<li>React Context</li>
+<li><a href="https://reactrouter.com/en/main">React Router</a></li>
+<li><a href="https://react.i18next.com/">React-i18next</a></li>
+<li>HTML</li>
+<li>CSS</li>
+<li>TypeScript</li>
+</ul>
 
-## Expanding the ESLint configuration
+<!-- Screenshots -->
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### :camera: Screenshots
 
-- Configure the top-level `parserOptions` property like this:
+<div align="center"> 
+  <img src="https://github.com/jesusalberto11/MyMovies/blob/main/src/assets/images/app_image_1.png" alt="App_Image_1" title="First section" />
+</div>
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+<div align="center"> 
+  <img src="https://github.com/jesusalberto11/MyMovies/blob/main/src/assets/images/app_image_2.png" alt="App_Image_2" title="Second section"/>
+</div>
+
+<div align="center"> 
+  <img src="https://github.com/jesusalberto11/MyMovies/blob/main/src/assets/images/app_image_3.png" alt="App_Image_3" title="Third section"/>
+</div>
+
+<!-- Getting Started -->
+
+## :toolbox: Getting Started
+
+<!-- Prerequisites -->
+
+### :bangbang: Prerequisites
+
+- To run this project you need:
+  - NodeJS
+  - Visual Studio Code
+  - Themoviedb API key 
+
+Once you have that, you're ready to go
+
+<!-- Installation and Run Locally -->
+
+### :running: Installation and Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/jesusalberto11/PoolStoreLandingPage
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Go to the project directory
+
+```bash
+  cd PoolStoreLandingPage
+```
+
+Install the dependencies
+
+```bash
+  npm install
+```
+
+Get your API key from themoviedb
+
+- <a href="https://developer.themoviedb.org/reference/intro/getting-started">Get key here</a>
+
+#### Once you have the key you should create a .env file at the root folder
+
+```bash
+  VITE_MOVIE_API_KEY="YOUR API KEY HERE"
+```
+
+Launch the development server
+
+```bash
+  npm run dev
+```
+
+<!-- Contributing -->
+
+## :wave: Contributing
+
+Contributions are always welcome!
+
+Please send a message if you're interested in contributing to the proyect.
+
+<!-- Contact -->
+
+## :handshake: Contact
+
+Jesus Alberto - [@LinkedIn](https://www.linkedin.com/in/jesus-alberto-morales-rico-7092a9227/)
