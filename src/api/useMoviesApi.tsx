@@ -86,11 +86,26 @@ export const useMoviesApi = () => {
     }
   };
 
+  const fetchBySearch = async (userInput: string) => {
+    try {
+      const response = await fetch(
+        `${ENDPOINT}search/collection?query=${userInput}&include_adult=false&language=en-US&page=1`,
+        OPTIONS
+      );
+      const data = await response.json();
+      return data.results;
+    } catch (error) {
+      console.error("[ERROR] while fetching search movies: ", error);
+      return false;
+    }
+  };
+
   return {
     fetchPopularMovies,
     fetchCategories,
     fetchMoviesByCategories,
     fetchTopRatedMovies,
     fetchUpcomingMovies,
+    fetchBySearch,
   };
 };
