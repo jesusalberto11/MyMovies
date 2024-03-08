@@ -12,9 +12,9 @@ const AppNavbar = (props: { align: string }) => {
             : "nav-items flex nav-items-horizontal"
         }
       >
-        <NavItem title="Home" icon={SVG_ICONS.HOME} />
-        <NavItem title="Search" icon={SVG_ICONS.SEARCH} />
-        <NavItem title="Watchlist" icon={SVG_ICONS.LIST} />
+        <NavItem to="/" title="Home" icon={SVG_ICONS.HOME} />
+        <NavItem to="search" title="Search" icon={SVG_ICONS.SEARCH} />
+        <NavItem to="/" title="Watchlist" icon={SVG_ICONS.LIST} />
       </ul>
     </nav>
   );
