@@ -1,0 +1,17 @@
+.error-message-container {
+  height: auto;
+  width: 350px;
+
+  background-color: #780000;
+
+  border-radius: 10px;
+  border: 2px solid #d90429;
+
+  padding: 15px 15px;
+
+  justify-content: space-between;
+}
+
+.error-message-container p {
+  font-size: 16px;
+}
