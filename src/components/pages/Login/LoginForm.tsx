@@ -43,12 +43,14 @@ const LoginForm = (props: { onSubmitForm: any; onGoogleSignIn: Function }) => {
         <ActionButton
           title="Sign In"
           icon={SVG_ICONS.LOG_IN}
-          onClickButton={(e: any) => props.onSubmitForm(e, email, password)}
+          type="submit"
+          onClickButton={() => {}}
         />
 
         <ActionButton
           title="Enter with Google"
           icon={SVG_ICONS.GOOGLE}
+          type="button"
           onClickButton={props.onGoogleSignIn}
         />
       </form>
