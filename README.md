@@ -55,13 +55,13 @@ Once you have that, you're ready to go
 Clone the project
 
 ```bash
-  git clone https://github.com/jesusalberto11/PoolStoreLandingPage
+  git clone https://github.com/jesusalberto11/MyMovies
 ```
 
 Go to the project directory
 
 ```bash
-  cd PoolStoreLandingPage
+  cd MyMovies
 ```
 
 Install the dependencies
