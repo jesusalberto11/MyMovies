@@ -4,7 +4,11 @@ import ContentDetails from "./ContentDetails";
 import ContentCategoryCard from "./ContentCategoryCard";
 import { IMovie } from "../interfaces/IMovie";
 
-const ContentCategory = (props: { title: string; movies: Array<Object> }) => {
+const ContentCategory = (props: {
+  title: string;
+  movies: Array<Object>;
+  type: string;
+}) => {
   const [isOpenContentDetails, setIsOpenContentDetails] = useState(false);
   const [selectedMovie, setSelectedMovie] = useState<IMovie>({
     adult: false,
@@ -31,7 +35,13 @@ const ContentCategory = (props: { title: string; movies: Array<Object> }) => {
   return (
     <div className="content-category-container">
       <h1>{props.title}</h1>
-      <div className="categories-container">
+      <div
+        className={
+          props.type === "vertical"
+            ? "categories-vertical"
+            : "categories-container"
+        }
+      >
         {props.movies.map((movie: any, index: number) => (
           <div key={index}>
             <ContentCategoryCard

@@ -13,3 +13,13 @@
   overflow-y: hidden;
   overflow-x: auto;
 }
+
+.categories-vertical {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: auto;
+  gap: 15px;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+}
