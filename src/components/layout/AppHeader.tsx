@@ -2,8 +2,9 @@ import "../../styles/components/layout/AppHeader.css";
 import AppNavbar from "./Navbar/AppNavbar";
 import AppSidebar from "./Sidebar/AppSidebar";
 import SidebarCloseZone from "./Sidebar/SidebarCloseZone";
-import { useSidebar } from "../../hooks/useSidebar";
 import SimpleButton from "../shared/SimpleButton";
+import UserInfo from "../shared/UserInfo";
+import { useSidebar } from "../../hooks/useSidebar";
 import { SVG_ICONS } from "../../helpers/svgIcons";
 
 const AppHeader = () => {
@@ -27,7 +28,10 @@ const AppHeader = () => {
         </div>
         <h1 className="pacifico-font app-title">MyMovies</h1>
       </div>
-      <AppNavbar align="horizontal" />
+      <div className="flex centered" style={{ gap: "15px" }}>
+        <AppNavbar align="horizontal" />
+        <UserInfo />
+      </div>
     </header>
   );
 };
