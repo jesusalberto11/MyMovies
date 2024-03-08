@@ -1,0 +1,31 @@
+.action-button {
+  cursor: pointer;
+
+  height: 30px;
+  width: auto;
+
+  gap: 5px;
+
+  padding: 5px 5px;
+  border: 1px solid white;
+  border-radius: 5px;
+
+  background-color: black;
+  color: white;
+
+  font-weight: bold;
+  text-transform: uppercase;
+
+  transition: all 0.2s;
+}
+
+.action-button:hover {
+  filter: drop-shadow(0 0 8px #90e0ef);
+
+  background-color: white;
+  color: black;
+}
+
+.action-button:hover svg {
+  fill: black;
+}
