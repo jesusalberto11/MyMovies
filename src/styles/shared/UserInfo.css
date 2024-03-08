@@ -16,3 +16,7 @@
   height: 300px;
   width: auto;
 }
+
+.user-info-container:hover {
+  filter: drop-shadow(0 0 8px #90e0ef);
+}
