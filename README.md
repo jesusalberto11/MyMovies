@@ -10,7 +10,7 @@ This repository contains a frontend app to fetch Themoviedb backend., it was cre
 <li>React + Vite</li>
 <li>React Context</li>
 <li><a href="https://reactrouter.com/en/main">React Router</a></li>
-<li><a href="https://react.i18next.com/">React-i18next</a></li>
+<li><a href="https://firebase.google.com/">Firebase</a></li>
 <li>HTML</li>
 <li>CSS</li>
 <li>TypeScript</li>
@@ -44,6 +44,7 @@ This repository contains a frontend app to fetch Themoviedb backend., it was cre
   - NodeJS
   - Visual Studio Code
   - Themoviedb API key 
+  - Firebase project API keys
 
 Once you have that, you're ready to go
 
@@ -78,6 +79,21 @@ Get your API key from themoviedb
 
 ```bash
   VITE_MOVIE_API_KEY="YOUR API KEY HERE"
+```
+
+Get you firebase project API keys
+
+- <a href="https://firebase.google.com/">Get key here</a>
+
+### Once you have your project keys, IN THE SAME .env file, you shoud put your API keys like this:
+
+```bash
+  VITE_FIREBASE_API_KEY="YOUR API KEY"
+  VITE_FIREBASE_AUTH_DOMAIN="YOUR AUTH DOMAIN"
+  VITE_FIREBASE_PROJECT_ID="YOUR PROJECT ID"
+  VITE_FIREBASE_STORAGE_BUCKET="YOUR STORAGE BUCKET"
+  VITE_FIREBASE_MESSAGING_SENDER_ID="YOUR MSG SENDER ID"
+  VITE_FIREBASE_APP_ID="YOUR FIREBASE APP ID"
 ```
 
 Launch the development server
