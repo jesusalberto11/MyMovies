@@ -17,7 +17,7 @@ const ContentDetails = (props: {
         <div className="content-details-content">
           <div className="content-details-header">
             <h2 className="content-details-title hide-text">
-              {props.movie?.title}
+              {props.movie?.title ? props.movie?.title : props.movie?.name}
             </h2>
             <SimpleButton
               showTitle={false}
@@ -45,10 +45,12 @@ const ContentDetails = (props: {
                   {props.movie?.overview}
                 </p>
               </div>
-              <MovieRatingAndAvg
-                average={props.movie?.vote_average}
-                movieDate={props.movie?.release_date}
-              />
+              {props.movie?.vote_average && (
+                <MovieRatingAndAvg
+                  average={props.movie?.vote_average}
+                  movieDate={props.movie?.release_date}
+                />
+              )}
             </div>
           </div>
         </div>

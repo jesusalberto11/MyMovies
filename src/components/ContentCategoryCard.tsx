@@ -15,12 +15,14 @@ const ContentCategoryCard = (props: {
     >
       <MovieImage source={props.movie?.poster_path} alt={props.movie?.title} />
       <p className="card-title" title={props.movie?.title}>
-        {props.movie?.title}
+        {props.movie?.title ? props.movie?.title : props.movie?.name}
       </p>
-      <MovieRatingAndAvg
-        average={props.movie?.vote_average}
-        movieDate={props.movie?.release_date}
-      />
+      {props.movie?.vote_average && (
+        <MovieRatingAndAvg
+          average={props.movie?.vote_average}
+          movieDate={props.movie?.release_date}
+        />
+      )}
     </div>
   );
 };
