@@ -8,9 +8,9 @@ const ActionButton = (props: {
   return (
     <button
       className="action-button centered"
-      role="button"
       title={props.title}
-      onClick={() => props.onClickButton()}
+      type="button"
+      onClick={(e) => props.onClickButton(e)}
     >
       <svg width="16" height="16" fill="#FFF" viewBox="0 0 16 16">
         <path d={props.icon} />
