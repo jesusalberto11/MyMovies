@@ -1,0 +1,75 @@
+.search-page {
+  width: 100vw;
+  height: 100vh;
+
+  padding: 15px 25px;
+  padding-bottom: 80px;
+
+  overflow-y: scroll;
+
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  gap: 30px;
+}
+
+.searched-movies-container {
+  width: 100vw;
+  padding: 15px 15px;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.searchbar {
+  width: 100%;
+  min-width: 40px;
+  max-width: 240px;
+
+  background-color: #1e2329;
+  color: white;
+
+  border: 1px solid #2d3137;
+  border-radius: 5px;
+
+  padding: 10px 10px;
+}
+
+.searchbar:focus {
+  outline: 2px solid #4361ee;
+}
+
+.searchbar::placeholder {
+  color: #c5c5c5;
+}
+
+@media screen and (max-width: 768px) {
+  .search-page {
+    align-items: start;
+    gap: 15px;
+  }
+}
