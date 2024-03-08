@@ -1,89 +1,80 @@
 import { useState } from "react";
 import "../styles/pages/Login.css";
 import {
+  doSignInWithEmailAndPassword,
   doSignInWithGoogle,
   doSignOut,
-  handleCreateUserWithEmailAndPassword,
 } from "../firebase/Auth";
 import { useAuth } from "../context/Auth";
+import UserProfile from "../components/pages/Login/UserProfile";
+import { useNavigate } from "react-router-dom";
+import LoginForm from "../components/pages/Login/LoginForm";
+import ErrorMessage from "../components/shared/ErrorMessage";
 
 const Login = () => {
+  const navigate = useNavigate();
   const { currentUser, isUserLoggedIn } = useAuth();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [isSigningIn, setIsSigningIn] = useState(false);
 
-  const onSubmit = async (e: any) => {
+  const [isSigningIn, setIsSigningIn] = useState<boolean>(false);
+  const [errorMessage, setErrorMessage] = useState<string>("");
+
+  const onEmailSignIn = (e: any, email: string, password: string) => {
     e.preventDefault();
+
     if (!isSigningIn) {
       setIsSigningIn(true);
-      await handleCreateUserWithEmailAndPassword(email, password);
+
+      doSignInWithEmailAndPassword(email, password)
+        .then(() => navigate("/"))
+        .catch((err: any) => {
+          setIsSigningIn(false);
+          setErrorMessage("Email or password are invalid.");
+          console.error("[ERROR] While trying to log in with email" + err);
+        });
     }
   };
 
   const onGoogleSignIn = (e: any) => {
     e.preventDefault();
+
     if (!isSigningIn) {
       setIsSigningIn(true);
-      doSignInWithGoogle().catch((err: any) => {
-        setIsSigningIn(false);
-        console.error(err);
-      });
+
+      doSignInWithGoogle()
+        .then(() => navigate("/"))
+        .catch((err: any) => {
+          setIsSigningIn(false);
+          setErrorMessage(
+            "A error ocurred while trying to sigin with Google, try again later."
+          );
+          console.error("[ERROR] While trying to log in with Google" + err);
+        });
     }
+  };
+
+  const handleLogOut = () => {
+    setIsSigningIn(false);
+    doSignOut().then(() => navigate("/"));
   };
 
   return (
     <div className="login-page flex">
-      <h1 className="pacifico-font">Sign In</h1>
-      {currentUser?.displayName ? currentUser?.displayName : currentUser?.email}
-      {isUserLoggedIn ? "true" : "false"}
-      <form className="form-container flex centered" onSubmit={onSubmit}>
-        {
-          <button
-            onClick={() => {
-              doSignOut();
-            }}
-          >
-            Logout
-          </button>
-        }
-        <div className="form-item flex">
-          <label htmlFor="email">Email</label>
-          <input
-            id="email"
-            className="login-input"
-            placeholder="Email"
-            type="email"
-            autoComplete="email"
-            required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+      {errorMessage !== "" && (
+        <ErrorMessage
+          message={errorMessage}
+          close={() => setErrorMessage("")}
+        />
+      )}
+      <>
+        {isUserLoggedIn ? (
+          <UserProfile handleLogOut={handleLogOut} />
+        ) : (
+          <LoginForm
+            onSubmitForm={onEmailSignIn}
+            onGoogleSignIn={onGoogleSignIn}
           />
-        </div>
-        <div className="form-item flex">
-          <label htmlFor="password">Password</label>
-          <input
-            id="password"
-            className="login-input"
-            type="password"
-            placeholder="Password"
-            autoComplete="current-password"
-            required
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-        <button> Signin</button>
-        <button
-          onClick={(e) => {
-            onGoogleSignIn(e);
-          }}
-        >
-          {" "}
-          Signin with google
-        </button>
-        <button> logOut</button>
-      </form>
+        )}
+      </>
     </div>
   );
 };
