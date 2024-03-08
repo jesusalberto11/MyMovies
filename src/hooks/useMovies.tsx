@@ -11,6 +11,7 @@ export const useMovies = () => {
     getTopRatedMovies,
     upcomingMovies,
     getUpcomingMovies,
+    getMoviesBySearch,
   } = useMoviesModel();
 
   return {
@@ -23,5 +24,6 @@ export const useMovies = () => {
     getTopRatedMovies,
     upcomingMovies,
     getUpcomingMovies,
+    getMoviesBySearch,
   };
 };
