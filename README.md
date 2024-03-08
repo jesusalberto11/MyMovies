@@ -1,5 +1,6 @@
 <div align="center">
   <h1>MyMovies</h1>
+    <a href="https://my-movies-theta-brown.vercel.app/" target="_blank" rel="noreferrer">Click here to see the project live</a>
 </div>
 
 ## :star2: About the Project
