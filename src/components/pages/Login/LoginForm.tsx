@@ -49,7 +49,7 @@ const LoginForm = (props: { onSubmitForm: any; onGoogleSignIn: Function }) => {
         onClickButton={() => {}}
       />
       <ActionButton
-        title="Create accout"
+        title="Create account"
         icon={SVG_ICONS.CREATE_ACCOUT}
         type="button"
         onClickButton={() => {
