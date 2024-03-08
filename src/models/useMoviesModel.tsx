@@ -21,6 +21,7 @@ export const useMoviesModel = () => {
     fetchMoviesByCategories,
     fetchTopRatedMovies,
     fetchUpcomingMovies,
+    fetchBySearch,
   } = useMoviesApi();
 
   const getPopularMovies = async () => {
@@ -73,6 +74,16 @@ export const useMoviesModel = () => {
     }
   };
 
+  const getMoviesBySearch = async (userInput: string) => {
+    try {
+      const response = await fetchBySearch(userInput);
+      return response;
+    } catch (error) {
+      console.error("[ERROR] while getting search movies: ", error);
+      return false;
+    }
+  };
+
   return {
     popularMovies,
     getPopularMovies,
@@ -83,5 +94,6 @@ export const useMoviesModel = () => {
     getTopRatedMovies,
     upcomingMovies,
     getUpcomingMovies,
+    getMoviesBySearch,
   };
 };
