@@ -3,6 +3,7 @@ import "../../../styles/components/pages/login/LoginForm.css";
 import ActionButton from "../../shared/ActionButton";
 import { SVG_ICONS } from "../../../helpers/svgIcons";
 import { useNavigate } from "react-router-dom";
+import NavItem from "../../layout/Navbar/NavItem";
 
 const LoginForm = (props: { onSubmitForm: any; onGoogleSignIn: Function }) => {
   const navigate = useNavigate();
@@ -62,6 +63,7 @@ const LoginForm = (props: { onSubmitForm: any; onGoogleSignIn: Function }) => {
         type="button"
         onClickButton={props.onGoogleSignIn}
       />
+      <NavItem title="Go back to home" icon={SVG_ICONS.HOME} to="/" />
     </form>
   );
 };
