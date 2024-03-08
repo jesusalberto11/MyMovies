@@ -1,0 +1,29 @@
+.user-profile-container {
+  height: auto;
+  width: 350px;
+
+  background-color: #003566;
+
+  padding: 25px 25px;
+
+  border-radius: 10px;
+
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.user-profile-image {
+  height: 150px;
+  width: auto;
+
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.user-profile-name {
+  color: #c4c4c4;
+
+  font-weight: bold;
+  font-size: 22px;
+}
