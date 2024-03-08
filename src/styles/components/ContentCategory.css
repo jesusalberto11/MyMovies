@@ -23,3 +23,9 @@
   overflow-y: auto;
   overflow-x: hidden;
 }
+
+@media screen and (max-width: 768px) {
+  .categories-vertical {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
