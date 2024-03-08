@@ -73,7 +73,8 @@ Get your API key from themoviedb
 
 - <a href="https://developer.themoviedb.org/reference/intro/getting-started">Get key here</a>
 
-#### Once you have the key you should create a .env file at the root folder
+#### Once you have the key you should create a .env file at the root folder and write this inside:
+##### Note: You should remplace "YOUR API KEY HERE" with your API key
 
 ```bash
   VITE_MOVIE_API_KEY="YOUR API KEY HERE"
