@@ -1,0 +1,41 @@
+.not-found-page {
+  height: 100vh;
+  width: 100vw;
+
+  flex-direction: column;
+  gap: 30px;
+}
+
+.link-button {
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+
+  gap: 10px;
+
+  background-color: #1e2329;
+  color: var(--main-font-color);
+
+  height: 40px;
+  width: 500px;
+  min-width: 40px;
+
+  padding: 0px 10px;
+
+  border-radius: 5px;
+  transition: all 0.2s;
+}
+
+.link-button:hover {
+  background-color: #a5a5a5;
+
+  transform: scale(1.1);
+}
+
+.link-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0px 0px;
+}
