@@ -83,9 +83,9 @@ Get your API key from themoviedb
 
 Get you firebase project API keys
 
-- <a href="https://firebase.google.com/">Get key here</a>
+- <a href="https://firebase.google.com/">Get keys here</a>
 
-### Once you have your project keys, IN THE SAME .env file, you shoud put your API keys like this:
+#### Once you have your project keys, IN THE SAME .env file, you shoud put your API keys like this:
 
 ```bash
   VITE_FIREBASE_API_KEY="YOUR API KEY"
@@ -95,6 +95,8 @@ Get you firebase project API keys
   VITE_FIREBASE_MESSAGING_SENDER_ID="YOUR MSG SENDER ID"
   VITE_FIREBASE_APP_ID="YOUR FIREBASE APP ID"
 ```
+
+Then you're ready to go
 
 Launch the development server
 
