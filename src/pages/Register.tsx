@@ -117,7 +117,7 @@ const Register = () => {
           Register now
         </button>
         <div className="flex centered" style={{ gap: "5px" }}>
-          <p>Already have an account</p>
+          <p>Already have an account?</p>
           <Link to="/login" replace>
             Login now
           </Link>
