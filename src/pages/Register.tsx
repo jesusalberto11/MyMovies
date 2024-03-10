@@ -1,10 +1,9 @@
-import { useEffect, useState } from "react";
 import "../styles/pages/Register.css";
-import ActionButton from "../components/shared/ActionButton";
+import { useState } from "react";
 import ErrorMessage from "../components/shared/ErrorMessage";
+import FormLayout from "../components/layout/Form/FormLayout";
 import { handleCreateUserWithEmailAndPassword } from "../firebase/Auth";
-import { useNavigate } from "react-router-dom";
-import { SVG_ICONS } from "../helpers/svgIcons";
+import { Link, useNavigate } from "react-router-dom";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -49,17 +48,16 @@ const Register = () => {
           close={() => setErrorMessage("")}
         />
       )}
-      <form
-        className="register-form-container flex centered"
-        onSubmit={(e) => onSubmitCreateUserForm(e)}
-      >
+      <FormLayout onSubmit={(e) => onSubmitCreateUserForm(e)}>
         <h1 className="pacifico-font">Register</h1>
         <div className="form-item flex">
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email" hidden>
+            Email
+          </label>
           <input
             id="email"
-            className="login-input"
-            placeholder="Email"
+            className="login-form-input"
+            placeholder="Email *"
             type="email"
             autoComplete="email"
             required
@@ -68,12 +66,14 @@ const Register = () => {
           />
         </div>
         <div className="form-item flex">
-          <label htmlFor="password">Password</label>
+          <label htmlFor="password" hidden>
+            Password
+          </label>
           <input
             id="password"
-            className="login-input"
+            className="login-form-input"
             type="password"
-            placeholder="Password"
+            placeholder="Password *"
             autoComplete="current-password"
             required
             value={password}
@@ -81,12 +81,14 @@ const Register = () => {
           />
         </div>
         <div className="form-item flex">
-          <label htmlFor="r-password">Repeat password</label>
+          <label htmlFor="r-password" hidden>
+            Repeat password
+          </label>
           <input
             id="r-password"
-            className="login-input"
+            className="login-form-input"
             type="password"
-            placeholder="Repeat password"
+            placeholder="Repeat password *"
             required
             value={repeatPassword}
             onChange={(e) => setRepeatPassword(e.target.value)}
@@ -111,21 +113,16 @@ const Register = () => {
         >
           Passwords should match
         </p>
-        <div className="flex centered" style={{ gap: "15px" }}>
-          <ActionButton
-            title="Go back"
-            icon={SVG_ICONS.GO_BACK}
-            type="button"
-            onClickButton={() => navigate("/login")}
-          />
-          <ActionButton
-            title="Create user"
-            icon={SVG_ICONS.CHECK}
-            type="submit"
-            onClickButton={() => {}}
-          />
+        <button className="login-button flex centered" type="submit">
+          Register now
+        </button>
+        <div className="flex centered" style={{ gap: "5px" }}>
+          <p>Already have an account</p>
+          <Link to="/login" replace>
+            Login now
+          </Link>
         </div>
-      </form>
+      </FormLayout>
     </div>
   );
 };

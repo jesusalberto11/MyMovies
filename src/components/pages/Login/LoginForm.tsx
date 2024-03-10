@@ -1,28 +1,25 @@
-import { useState } from "react";
 import "../../../styles/components/pages/login/LoginForm.css";
+import { useState } from "react";
 import ActionButton from "../../shared/ActionButton";
 import { SVG_ICONS } from "../../../helpers/svgIcons";
-import { useNavigate } from "react-router-dom";
-import NavItem from "../../layout/Navbar/NavItem";
+import { Link } from "react-router-dom";
+import FormLayout from "../../layout/Form/FormLayout";
 
 const LoginForm = (props: { onSubmitForm: any; onGoogleSignIn: Function }) => {
-  const navigate = useNavigate();
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   return (
-    <form
-      className="form-container flex centered"
-      onSubmit={(e) => props.onSubmitForm(e, email, password)}
-    >
-      <h1 className="pacifico-font">Sign In</h1>
+    <FormLayout onSubmit={(e) => props.onSubmitForm(e, email, password)}>
+      <h1 className="pacifico-font">Welcome back!</h1>
       <div className="form-item flex">
-        <label htmlFor="email">Email</label>
+        <label htmlFor="email" hidden>
+          Email
+        </label>
         <input
           id="email"
-          className="login-input"
-          placeholder="Email"
+          className="login-form-input"
+          placeholder="Email *"
           type="email"
           autoComplete="email"
           required
@@ -31,40 +28,44 @@ const LoginForm = (props: { onSubmitForm: any; onGoogleSignIn: Function }) => {
         />
       </div>
       <div className="form-item flex">
-        <label htmlFor="password">Password</label>
+        <label htmlFor="password" hidden>
+          Password
+        </label>
         <input
           id="password"
-          className="login-input"
+          className="login-form-input"
           type="password"
-          placeholder="Password"
+          placeholder="Password *"
           autoComplete="current-password"
           required
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
       </div>
-      <ActionButton
-        title="Sign In"
-        icon={SVG_ICONS.LOG_IN}
-        type="submit"
-        onClickButton={() => {}}
-      />
-      <ActionButton
-        title="Create account"
-        icon={SVG_ICONS.CREATE_ACCOUT}
-        type="button"
-        onClickButton={() => {
-          navigate("../register", { replace: true });
-        }}
-      />
+      <button className="login-button flex centered" type="submit">
+        Login
+      </button>
+      <div className="flex centered" style={{ gap: "10px" }}>
+        <hr />
+        <p>OR</p>
+        <hr />
+      </div>
       <ActionButton
         title="Enter with Google"
         icon={SVG_ICONS.GOOGLE}
         type="button"
         onClickButton={props.onGoogleSignIn}
       />
-      <NavItem title="Go back to home" icon={SVG_ICONS.HOME} to="/" />
-    </form>
+      <div className="flex centered" style={{ gap: "5px" }}>
+        <p>Don't have an account?</p>
+        <Link to="/register" replace>
+          Signup
+        </Link>
+      </div>
+      <Link to="/" replace>
+        Go back to home
+      </Link>
+    </FormLayout>
   );
 };
 
