@@ -13,23 +13,9 @@
   gap: 15px;
 }
 
-.register-form-container {
-  height: auto;
-  width: 350px;
-
-  background-color: #003566;
-
-  border-radius: 10px;
-
-  padding: 10px 0px;
-
-  flex-direction: column;
-  gap: 20px;
-}
-
 .password-checker {
   height: auto;
-  width: auto;
+  width: 100%;
 
   padding: 5px 15px;
 
